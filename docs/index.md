@@ -1,4 +1,4 @@
-<p> test10</p>
+<p> test11</p>
 <h1>Preparing Data for Joey NMT Toolkit</h1>
 
 <h2>Introduction</h2>
@@ -50,11 +50,23 @@
 
 <pre class="line-number">
   <code class="language-python">
+  
     import re
     # open, read, and truecase the English to Tohono O'odham tsv file
     #of the New Testament
     tsv = open('eng-ood_NT.tsv')
     new_testament = tsv.read().lower()
+    
+    # remove verse numbers and non-alphabet characters
+    normalize_text = re.sub(r'(\d.*\d)*[^a-z\s]*','',new_testament)
+
+    # remove the tab in each verse and replace it with triple bars
+    # these triple bars separate the source and target language in each verse
+    add_trip_bars = re.sub(r'\t','|||',normalize_text).strip()
+    
+    # split verses at newline
+    verse_sep = add_trip_bars.split('\n')
+    
   </code>
 </pre>
 

@@ -14,7 +14,7 @@ this parallel text is split in verses</p>
     <blockquote> <sax> I'm always thanking God for you because of the grace of God given to you in Christ Jesus. ||| Chum ani hekid ab si hoꞌigeꞌid g Jiosh em-hekaj. Ab amt i s-wohoch g Christ. T g Jiosh ab i em-mah g geꞌe i wehmtadag. <br>
 <sax> Through him you have been made rich in everything, in all that you say and every aspect of what you know. ||| M heg hekaj s-mahch mo haschu s-apꞌe ch s-ap haꞌichu am hab junihim ch s-ap haꞌichu k amjed neneok. <br>
 <sax> In fact the testimony of Christ was proved valid in your experience, ||| Am o e chehgidch mam s-wihnam an uꞌukch g haꞌichu t-ahga ab amjed g Christ.</blockquote>
-  <p>the tag <sax> is used here becasue two target language data was provided in two orthographies. The New Testement parallel text is in the Saxton-Saxton orthographie, while parallel sentences taken from dictionary examples were in the Alvares-Hale orthography. The tag marks which orthograohy the Tohono O'odham examples are in. The tags at the beginning of the verses here are only relevant if you are uses sources from multiple orthograhies</blockquote>
+  <p>the tag <sax> is used here becasue two target language data was provided in two orthographies. The New Testement parallel text is in the Saxton-Saxton orthographie, while parallel sentences taken from dictionary examples were in the Alvares-Hale orthography. The tag marks which orthograohy the Tohono O'odham examples are in. The tags at the beginning of the verses here are only relevant if you are uses sources from multiple orthograhies </blockquote>
   
 <h2> Creating Parallel Text</h2>  
   
@@ -23,7 +23,7 @@ this parallel text is split in verses</p>
   <p>Here is an example of the parallel text in a tsv file.</p>
     <blockquote> 1CO01:2	It is sent to the church of God in Corinth, those who are being made right in Christ Jesus, called to live holy lives—and to everyone who worships the Lord Jesus Christ everywhere, the Lord both of them and of us.  Jiosh at ab i em-gawulkai mamt d wo hemajkamgajk. Kumt heg hekaj ab i e hemakoj wehsijj t-wehm ahchim mach hab waꞌap ab ihm g t-kownalig Jesus Christ.<br> 
 1CO01:3	May you have grace and peace from God our Father and the Lord Jesus Christ.  	Ab o wa si s-em-hoꞌigeꞌid g t-ohg Jiosh g t-kownalig Jesus Christ wehm ch ab wo wa baꞌich i em-mahkad g i wehmtadag ch s-ap tahhadkam.<br> 
-1CO01:4	I'm always thanking God for you because of the grace of God given to you in Christ Jesus.  	Chum ani hekid ab si hoꞌigeꞌid g Jiosh em-hekaj. Ab amt i s-wohoch g Christ. T g Jiosh ab i em-mah g geꞌe i wehmtadag.</blockquote>
+1CO01:4	I'm always thanking God for you because of the grace of God given to you in Christ Jesus.  	Chum ani hekid ab si hoꞌigeꞌid g Jiosh em-hekaj. Ab amt i s-wohoch g Christ. T g Jiosh ab i em-mah g geꞌe i wehmtadag. </blockquote>
 <p>To finish preprocessing the data and making it look like the example above we need to:</p> 
 <ol>
 <li>truecased</li>

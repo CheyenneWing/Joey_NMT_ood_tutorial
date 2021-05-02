@@ -44,8 +44,7 @@
 <ol>
   <li>Truecase </li>
   <li>Remove verse numbers and non-alphabet characters </li>
-  <li>Incert tripple bars between the source and target languages </li>
-  <li>Split data into train, test, and dev sets </li>  
+  <li>Incert tripple bars between the source and target languages </li> 
 </ol>
 
 <pre class="line-number">
@@ -70,8 +69,46 @@
   </code>
 </pre>
 
-<p> how the bible data is split 716 716 5728
+<p> The last step is spliting the data in train, test, and dev sets. Here the data is split 80% train, 10% test, and %10 dev. 
 </p>
+
+<pre class="line-number">
+  <code class="language-python">
+  
+    # make empty train, test, dev lists
+    train = []
+    test = []
+    dev = []
+
+    # use modulo operator in Python to sep 10% 10 % dump last 80% 
+    for i,example in enumerate(verse_sep):
+        if i % 10 == 1:
+            dev.append(example)
+        elif i % 10 == 2:
+            test.append(example)
+        else:
+            train.append(example)
+    print(len(dev))
+    print(len(test))
+    print(len(train))
+
+    # write out the train, test, and dev lists to files
+    with open('eng-ood_dev.txt', 'w') as filehandle:
+        for listitem in dev:
+            filehandle.write('%s\n' % listitem)
+    with open('eng-ood_test.txt', 'w') as filehandle:
+        for listitem in test:
+            filehandle.write('%s\n' % listitem)
+    with open('eng-ood_train.txt', 'w') as filehandle:
+        for listitem in train:
+            filehandle.write('%s\n' % listitem)
+  
+  </code>
+</pre>
+
+<p> If we print the length of each list we see there are 5728 parallel verses in train, 716 in test, and 716 in dev.</p> 
+
+<p>running this code in the same directory as eng-ood_NT.tsv writes and returns 3 txt files contianing the preprocessed train, test, and dev sets</p>
 
 <p> if you download eng-ood_NT.tsv and extract_NT_verses.py to the same directory and then run extract_NT_verses.py, it will call eng-ood_NT.tsv and return a preprocessed train, test, and dev file.
 </p>

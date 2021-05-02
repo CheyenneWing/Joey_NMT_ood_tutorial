@@ -31,5 +31,5 @@ Joey NMT requires parallel text of the source language immediately followed by a
 </ol>
 
 <p> how the bible data is split 716 716 5728</p>
-<p> if you download eng-ood_NT.tsv and run extract_NT_verses.py it will return a preprocessed train, test, and dev file.</p>
+<p> if you download eng-ood_NT.tsv and extract_NT_verses.py to the same directory and then run extract_NT_verses.py, it will call eng-ood_NT.tsv and return a preprocessed train, test, and dev file.</p>
 <i>This research was funded by NSF-DEL and NSF-GRFP. Other contributers include Dr. Graham Neubig and Dr. Antonios Anastasopoulos. <i/>

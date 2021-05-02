@@ -1,4 +1,4 @@
-<p> test 9</p>
+<p> test10</p>
 <h1>Preparing Data for Joey NMT Toolkit</h1>
 
 <h2>Introduction</h2>
@@ -47,6 +47,16 @@
   <li>Incert tripple bars between the source and target languages </li>
   <li>Split data into train, test, and dev sets </li>  
 </ol>
+
+<pre class="line-number">
+  <code class="language-python">
+    import re
+    # open, read, and truecase the English to Tohono O'odham tsv file
+    #of the New Testament
+    tsv = open('eng-ood_NT.tsv')
+    new_testament = tsv.read().lower()
+  </code>
+</pre>
 
 <p> how the bible data is split 716 716 5728
 </p>

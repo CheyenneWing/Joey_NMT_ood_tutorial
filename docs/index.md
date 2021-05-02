@@ -1,4 +1,4 @@
-<p> test11</p>
+<p> test12</p>
 <h1>Preparing Data for Joey NMT Toolkit</h1>
 
 <h2>Introduction</h2>
@@ -69,7 +69,7 @@
   </code>
 </pre>
 
-<p> The last step is spliting the data in train, test, and dev sets. Here the data is split 80% train, 10% test, and %10 dev. 
+<p> The last step is spliting the data in train, test, and dev sets. Here the data is split 80% train, 10% test, and %10 dev. <br> We don't want to split the data into train, test, and dev sets as it is. If we did then whole books would stay together in sets. Instead we want to diversify the data that's in the 3 sets for a more accurate view of all the data. One way to do this is to iterate through ten verses at a time, then append 1 verse to dev, 1 verse to test, and the remaining 8 to train. This accomplishes the task of splitting the data into 80% train, 10% test, and 10% dev while also ensurring that each set is an accurate representation of the whole data set. 
 </p>
 
 <pre class="line-number">
@@ -106,11 +106,18 @@
   </code>
 </pre>
 
-<p> If we print the length of each list we see there are 5728 parallel verses in train, 716 in test, and 716 in dev.</p> 
+<p> If we print the length of each list we see there are 5728 parallel verses in train, 716 in test, and 716 in dev. Which is the division we want from the total 7,160 parallel verses. </p> 
 
-<p>running this code in the same directory as eng-ood_NT.tsv writes and returns 3 txt files contianing the preprocessed train, test, and dev sets</p>
+Here are three examples from the test data. You can see it matches the expected format example above.
+<pre><code>
+|||so my good friends stay away from idol worship |||pegih niwepnag mani si emtatchua pi g ab hu wui wo shai e hoigeidahunad hegai mo haschu pi d jiosh  
+|||you shouldnt look out for yourself but for your neighbor  |||am g wo schegitok g chum hedai haapedag ch pi wabsh hejel etatchui 
+|||im grateful that you always remember me and that you are keeping to the teachings just as i passed them on to you  |||ab ani si has emelid mamsh chum hekid snichegito ch am oidch hab e junihim ihda himdag mant am emwui uapa
+</code></pre>
 
-<p> if you download eng-ood_NT.tsv and extract_NT_verses.py to the same directory and then run extract_NT_verses.py, it will call eng-ood_NT.tsv and return a preprocessed train, test, and dev file.
+<p>running this code in the same directory as eng-ood_NT.tsv writes and returns the three txt files contianing the preprocessed train, test, and dev sets in the directory you ran the code from.</p>
+
+<p> if you download the tsv file (eng-ood_NT.tsv) and the code (extract_NT_verses.py) here INSERT LINK TO DOCS you can run the code yourself and see the complete output.
 </p>
 
 

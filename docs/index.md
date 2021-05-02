@@ -9,10 +9,9 @@ Joey NMT requires parallel text of the source language immediately followed by a
 
 <h2> Expected Format </h2>
    <p>This parallel text is provided in verses. The text of the source language is first, followed by the target language. Triple bars are used to divide the two languages. This is an example of the first 3 parallel verses in the train set after being processed. </p>
-   <divstyle = "overflow-x: scroll">
     <sax> I'm always thanking God for you because of the grace of God given to you in Christ Jesus. ||| Chum ani hekid ab si hoꞌigeꞌid g Jiosh em-hekaj. Ab amt i s-wohoch g Christ. T g Jiosh ab i em-mah g geꞌe i wehmtadag.
     <sax> Through him you have been made rich in everything, in all that you say and every aspect of what you know. ||| M heg hekaj s-mahch mo haschu s-apꞌe ch s-ap haꞌichu am hab junihim ch s-ap haꞌichu k amjed neneok.
-    <sax> In fact the testimony of Christ was proved valid in your experience, ||| Am o e chehgidch mam s-wihnam an uꞌukch g haꞌichu t-ahga ab amjed g Christ.</div>
+    <sax> In fact the testimony of Christ was proved valid in your experience, ||| Am o e chehgidch mam s-wihnam an uꞌukch g haꞌichu t-ahga ab amjed g Christ.
   <p>The tag <sax> is used here becasue the target language data was provided in two orthographies. The New Testement text is in the Saxton-Saxton orthography <sax>, while parallel additional parallel texts was taken from dictionary examples in the Alvares-Hale orthography <ah>. The tag marks which orthography the source text are in. Using tags like this is only relevant if you are using data in multiple orthograhies. </p>
   
 <h2> Creating Parallel Text </h2> 

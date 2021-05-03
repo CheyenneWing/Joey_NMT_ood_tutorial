@@ -1,15 +1,15 @@
-<p> test12</p>
+<p> test13</p>
 <h1>Preparing Data for Joey NMT Toolkit</h1>
 
 <h2>Introduction</h2>
 
 <p>Joey NMT is a neural machine translation toolkit that aims to be accessible to novice learners.
- Joey NMT requires parallel text of the source language immediately followed by a translation from the       target language. This tutorial focuses on preparing data from less-resources languages through examples of  data preperation for the Tohono O'odham language. 
+ Joey NMT requires parallel text of the source language immediately followed by a translation from the       target language. This tutorial focuses on preparing data from less-resources languages through examples of  data preperation for the Tohono O'odham language (ISO code ood). Tohono O'odham is an endangered and less-resourced Native American language originating from southern Arizona and north-western Mexico.
 </p>
 
 <h2> Parallel Text Sources</h2>  
 
-<p>Many translations of the Bible have been made for less-resourced and endangered languges. If you are interested in using Joey NMT for a less-resourced languages, you might begin by searching for a Bible translaion. For training Tohono O'odham (also written as ood) I used a translation of the New Testement from Wycliffe Bible Translators, Inc. The translation can be viewed here: https://ebible.org/find/details.php?id=oodNT © 2010, Wycliffe Bible Translators, Inc. All rights reserved.
+<p>Many translations of the Bible have been made for less-resourced and endangered languges, so if you looking for data for a less-resourced languages, searching for Bible translaion can be a good place to start. For preparing data for Joey NMT in Tohono O'odham I used the "Jiosh Wechij O'ohana" English to Tohono O'odham translation of the New Testament from Wycliffe Bible Translators, Inc. "Jiosh Wechij O'ohana" can be viewed by following this link:<br> https://ebible.org/find/details.php?id=oodNT 
 </p>
 
 <h2> Expected Format</h2>
@@ -116,15 +116,13 @@ Here are three examples from the test data. You can see that it is closer to exp
 </code></pre>
 
 
-<p> following is an editted source code that does give the correct output. It is less intuitive then the last code but returns the correct format <br> ADD EDITED SOURCE CODE HERE</p>
+<p> following is an editted script that does give the correct output. I chose to include this as well as the not-quite-working script, because this working script is less intuitive then the last code but returns the correct format. I added comments to each step to descripe the code and make the process more transparent. <br> ADD EDITED SOURCE CODE HERE</p>
 
 
-<p>running this code in the same directory as eng-ood_NT.tsv writes and returns the three txt files contianing the preprocessed train, test, and dev sets in the directory you ran the code from.</p>
+<p>running this code in the same directory as the tsv file writes and returns three txt files contianing the preprocessed train, test, and dev sets into the directory where the code was initialized.</p>
 
 <p> The working code and tsv file of data can be accessed through this link:<br> https://github.com/CheyenneWing/Preparing-Data-for-Joey-NMT-Toolkit/tree/main/docs 
 </p>
 
-
-
-<i>This research was funded by NSF-DEL and NSF-GRFP. Other contributers include Dr. Graham Neubig and Dr. Antonios Anastasopoulos. 
+<i>This research was funded by NSF-DEL and NSF-GRFP. Other contributers include Dr. Graham Neubig and Dr. Antonios Anastasopoulos. Copywrite for the bible translation used is held by © 2010, Wycliffe Bible Translators, Inc. All rights reserved.
 </i>

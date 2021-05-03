@@ -9,7 +9,7 @@
 
 <h2> Parallel Text Sources</h2>  
 
-<p>Many translations of the Bible have been made for less-resourced and endangered languges. If you are interested in using Joey NMT for a less-resourced languages, you might begin by searching for a Bible translaion. For training Tohono O'odham (also written as ood) I used a translation of the New Testement from Wycliffe Bible Translators, Inc. It can be viewed here: https://ebible.org/find/details.php?id=oodNT 
+<p>Many translations of the Bible have been made for less-resourced and endangered languges. If you are interested in using Joey NMT for a less-resourced languages, you might begin by searching for a Bible translaion. For training Tohono O'odham (also written as ood) I used a translation of the New Testement from Wycliffe Bible Translators, Inc. The translation can be viewed here: https://ebible.org/find/details.php?id=oodNT © 2010, Wycliffe Bible Translators, Inc. All rights reserved.
 </p>
 
 <h2> Expected Format</h2>
@@ -108,17 +108,22 @@
 
 <p> If we print the length of each list we see there are 5728 parallel verses in train, 716 in test, and 716 in dev. Which is the division we want from the total 7,160 parallel verses. </p> 
 
-Here are three examples from the test data. You can see it matches the expected format example above.
+Here are three examples from the test data. You can see that it is closer to expected format example above but not quite perfect.
 <pre><code>
 |||so my good friends stay away from idol worship |||pegih niwepnag mani si emtatchua pi g ab hu wui wo shai e hoigeidahunad hegai mo haschu pi d jiosh  
 |||you shouldnt look out for yourself but for your neighbor  |||am g wo schegitok g chum hedai haapedag ch pi wabsh hejel etatchui 
 |||im grateful that you always remember me and that you are keeping to the teachings just as i passed them on to you  |||ab ani si has emelid mamsh chum hekid snichegito ch am oidch hab e junihim ihda himdag mant am emwui uapa
 </code></pre>
 
+
+<p> following is an editted source code that does give the correct output. It is less intuitive then the last code but returns the correct format <br> ADD EDITED SOURCE CODE HERE</p>
+
+
 <p>running this code in the same directory as eng-ood_NT.tsv writes and returns the three txt files contianing the preprocessed train, test, and dev sets in the directory you ran the code from.</p>
 
-<p> if you download the tsv file (eng-ood_NT.tsv) and the code (extract_NT_verses.py) here INSERT LINK TO DOCS you can run the code yourself and see the complete output.
+<p> The working code and tsv file of data can be accessed through this link:<br> https://github.com/CheyenneWing/Preparing-Data-for-Joey-NMT-Toolkit/tree/main/docs 
 </p>
+
 
 
 <i>This research was funded by NSF-DEL and NSF-GRFP. Other contributers include Dr. Graham Neubig and Dr. Antonios Anastasopoulos. 

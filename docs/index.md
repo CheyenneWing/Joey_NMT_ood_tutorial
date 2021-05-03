@@ -1,4 +1,4 @@
-<p> test15</p>
+<p> test16</p>
 <h1>Preparing Data for Joey NMT Toolkit</h1>
 
 <h2>Introduction</h2>
@@ -47,7 +47,7 @@
   <li>Incert tripple bars between the source and target languages </li> 
 </ol>
 
-<p> note the following code is not yet complete</p>
+<p> NOTE: the following code is <b>not</b> the finished working script</p>
 <pre class="line-number">
   <code class="language-python">
   
@@ -73,7 +73,7 @@
 <p> Now the final step in preprocessing is spliting the data in train, test, and dev sets. Here the data is split 80% train, 10% test, and %10 dev. Note that we don't want to split the data into train, test, and dev sets as it currently is. If we did then whole books would stay together in sets. Instead we want to diversify the data we write to the 3 sets for a more accurate view of all the whole dataset. One way to do this is to iterate through ten verses at a time, then append 1 verse to dev, 1 verse to test, and the remaining 8 to train. This accomplishes the task of splitting the data into 80% train, 10% test, and 10% dev while also ensurring that each set is an accurate representation of the whole data set. 
 </p>
 
-<p> note the following code is not yet complete</p>
+<p>NOTE: the following code is <b>not</b> the finished working script</p>
 <pre class="line-number">
   <code class="language-python">
   

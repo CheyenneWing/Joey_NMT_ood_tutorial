@@ -47,6 +47,7 @@
   <li>Incert tripple bars between the source and target languages </li> 
 </ol>
 
+<p> note the following code is not yet complete</p>
 <pre class="line-number">
   <code class="language-python">
   
@@ -72,6 +73,7 @@
 <p> The last step is spliting the data in train, test, and dev sets. Here the data is split 80% train, 10% test, and %10 dev. <br> We don't want to split the data into train, test, and dev sets as it is. If we did then whole books would stay together in sets. Instead we want to diversify the data that's in the 3 sets for a more accurate view of all the data. One way to do this is to iterate through ten verses at a time, then append 1 verse to dev, 1 verse to test, and the remaining 8 to train. This accomplishes the task of splitting the data into 80% train, 10% test, and 10% dev while also ensurring that each set is an accurate representation of the whole data set. 
 </p>
 
+<p> note the following code is not yet complete</p>
 <pre class="line-number">
   <code class="language-python">
   
@@ -108,7 +110,8 @@
 
 <p> If we print the length of each list we see there are 5728 parallel verses in train, 716 in test, and 716 in dev. Which is the division we want from the total 7,160 parallel verses. </p> 
 
-Here are three examples from the test data. You can see that it is closer to expected format example above but not quite perfect.
+Here are three examples from the test data. You can see that it is closer to expected format example above but not quite perfect because it add triple bars to the beginning of the eng verse when we only want triple bars inbetween the source and target code in each verse. It also leaves part of the verses reference in some verses.
+
 <pre><code>
 |||so my good friends stay away from idol worship |||pegih niwepnag mani si emtatchua pi g ab hu wui wo shai e hoigeidahunad hegai mo haschu pi d jiosh  
 |||you shouldnt look out for yourself but for your neighbor  |||am g wo schegitok g chum hedai haapedag ch pi wabsh hejel etatchui 

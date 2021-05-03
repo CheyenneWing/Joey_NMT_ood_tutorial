@@ -119,7 +119,7 @@ act|||so now we have to choose someone who has been with us the whole time that 
 </code></pre>
 
 
-<p> following is an editted script that does give the correct output. I chose the previous script as well as this working one, because this working script is much less intuitive then the previous script. I added comments to each step to descripe the code and make the process more transparent. <br> ADD EDITED SOURCE CODE HERE</p>
+<p> following is an editted script that returns the correct output. I chose to include the broken script as well as this working script, because this working script is much less intuitive then the broken script, and doesn't make the necessary steps as clear. I have added comments to each step in the following script to descripe the code and make the process more transparent. <br> ADD EDITED SOURCE CODE HERE</p>
 
 <p>running this code in the same directory as the tsv file writes and returns three txt files contianing the preprocessed train, test, and dev sets into the directory where the code was initialized.</p>
 

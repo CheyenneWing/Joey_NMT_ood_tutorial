@@ -1,4 +1,4 @@
-<p> test13</p>
+<p> test14</p>
 <h1>Preparing Data for Joey NMT Toolkit</h1>
 
 <h2>Introduction</h2>
@@ -9,12 +9,12 @@
 
 <h2> Parallel Text Sources</h2>  
 
-<p>Many translations of the Bible have been made for less-resourced and endangered languges, so if you looking for data for a less-resourced languages, searching for Bible translaion can be a good place to start. For preparing data for Joey NMT in Tohono O'odham I used the "Jiosh Wechij O'ohana" English to Tohono O'odham translation of the New Testament from Wycliffe Bible Translators, Inc. "Jiosh Wechij O'ohana" can be viewed by following this link:<br> https://ebible.org/find/details.php?id=oodNT 
+<p>Many translations of the Bible have been made for less-resourced and endangered languges. If you looking for data for a less-resourced languages, searching for Bible translaion can be a good place to start. For preparing data for Joey NMT in Tohono O'odham I used the "Jiosh Wechij O'ohana" English to Tohono O'odham translation of the New Testament from Wycliffe Bible Translators, Inc. The English to Tohono O'odham translation of the New Testament "Jiosh Wechij O'ohana" can be viewed by following this link: https://ebible.org/find/details.php?id=oodNT 
 </p>
 
 <h2> Expected Format</h2>
 
- <p>This parallel text is provided in verses. The text of the source language is first, followed by the target language. Triple bars are used to divide the two languages. This is an example of the first 3 parallel verses in the train set after being processed.
+ <p>The text below is parallel text is provided from scripture verses. The text of the source language is first, followed by the target language. Triple bars are used to divide the two languages. This is an example of the first 3 parallel verses in the train set after being correctly preprocessed.
 </p>
 
 <pre><code> I'm always thanking God for you because of the grace of God given to you in Christ Jesus. ||| Chum ani hekid ab si hoꞌigeꞌid g Jiosh em-hekaj. Ab amt i s-wohoch g Christ. T g Jiosh ab i em-mah g geꞌe i wehmtadag.
@@ -22,15 +22,15 @@
     In fact the testimony of Christ was proved valid in your experience, ||| Am o e chehgidch mam s-wihnam an uꞌukch g haꞌichu t-ahga ab amjed g Christ.
 </code></pre>
     
-<p> The tag <sax> is used here becasue the target language data was provided in two orthographies. The New Testement text is in the Saxton-Saxton orthography <sax>, while parallel additional parallel texts was taken from dictionary examples in the Alvares-Hale orthography <ah>. The tag marks which orthography the source text are in. Using tags like this is only relevant if you are using data in multiple orthograhies. 
+<p> The tag <sax> is used here becasue the target language data was provided in two orthographies. "Jiosh Wechij O'ohana" is written in the Saxton-Saxton orthography <sax>, while additional parallel texts used were gather from an dictionary examples written in the Alvares-Hale orthography <ah>. The tag at the beginning of each verse marks which orthography the target text is in. Using tags like this is only necessary if you are using data in multiple orthograhies. 
 </p>
   
 <h2> Creating Parallel Text</h2> 
 
-<p>start with a tsv (Tab Separated Values) file of the source and target language. Each verse in English is separated by a tab and then the coresponding verse in ood. 
+<p>Start with a tsv (Tab Separated Values) file of the source and target language. Each verse in English is separated by a tab and then the coresponding verse in ood. 
 </p>
 
-<p>Here is an example of the eng-ood.tsv file.
+<p>Following is an example data in a tsv file format.
 </p>
   
 <pre><code>1CO01:2	It is sent to the church of God in Corinth, those who are being made right in Christ Jesus, called to live holy lives—and to everyone who worships the Lord Jesus Christ everywhere, the Lord both of them and of us.  Jiosh at ab i em-gawulkai mamt d wo hemajkamgajk. Kumt heg hekaj ab i e hemakoj wehsijj t-wehm ahchim mach hab waꞌap ab ihm g t-kownalig Jesus Christ.
@@ -70,7 +70,7 @@
   </code>
 </pre>
 
-<p> The last step is spliting the data in train, test, and dev sets. Here the data is split 80% train, 10% test, and %10 dev. <br> We don't want to split the data into train, test, and dev sets as it is. If we did then whole books would stay together in sets. Instead we want to diversify the data that's in the 3 sets for a more accurate view of all the data. One way to do this is to iterate through ten verses at a time, then append 1 verse to dev, 1 verse to test, and the remaining 8 to train. This accomplishes the task of splitting the data into 80% train, 10% test, and 10% dev while also ensurring that each set is an accurate representation of the whole data set. 
+<p> Now the final step in preprocessing is spliting the data in train, test, and dev sets. Here the data is split 80% train, 10% test, and %10 dev. Note that we don't want to split the data into train, test, and dev sets as it currently is. If we did then whole books would stay together in sets. Instead we want to diversify the data we write to the 3 sets for a more accurate view of all the whole dataset. One way to do this is to iterate through ten verses at a time, then append 1 verse to dev, 1 verse to test, and the remaining 8 to train. This accomplishes the task of splitting the data into 80% train, 10% test, and 10% dev while also ensurring that each set is an accurate representation of the whole data set. 
 </p>
 
 <p> note the following code is not yet complete</p>
@@ -108,23 +108,22 @@
   </code>
 </pre>
 
-<p> If we print the length of each list we see there are 5728 parallel verses in train, 716 in test, and 716 in dev. Which is the division we want from the total 7,160 parallel verses. </p> 
+<p> If we print the length of each list we see there are 5728 parallel verses in train, 716 in test, and 716 in dev. This is the 80/10/10 division we want from the dataset! </p> 
 
-Here are three examples from the test data. You can see that it is closer to expected format example above but not quite perfect because it add triple bars to the beginning of the eng verse when we only want triple bars inbetween the source and target code in each verse. It also leaves part of the verses reference in some verses.
+Following are three examples from the dev data. You can see that it is closer to expected format example above, but not quite perfect. Here we have triple bars to the beginning of the eng verse when we only want triple bars inbetween the source and target code in each verse. It also leaves part of the reference in some verses.
 
 <pre><code>
-|||so my good friends stay away from idol worship |||pegih niwepnag mani si emtatchua pi g ab hu wui wo shai e hoigeidahunad hegai mo haschu pi d jiosh  
-|||you shouldnt look out for yourself but for your neighbor  |||am g wo schegitok g chum hedai haapedag ch pi wabsh hejel etatchui 
-|||im grateful that you always remember me and that you are keeping to the teachings just as i passed them on to you  |||ab ani si has emelid mamsh chum hekid snichegito ch am oidch hab e junihim ihda himdag mant am emwui uapa
+|||i hope to see you soon so we can talk face to face  |||nani pi am shimimk mant wo mneid k wo mwehm neo ab amjed 
+act|||men of galilee why are you standing here staring at the sky they asked this same jesus who has been taken up from you to heaven shall come in the same way you saw him go into heaven |||ch hab kaij pi g ia hu wabsh wo gegokk ch am uhgk nenead mat hebai hih g jesus hema tash at wo wa uhpam jiwia hab masma mam hemuch am neid mat has i masma gam hu hih 
+act|||so now we have to choose someone who has been with us the whole time that jesus was with us  from the time john was baptizing up until the day jesus was taken up to heaven from us one of these must be chosen to join together with us as we witness giving evidence of jesus resurrection  |||kut id hekaj hemho wa am hema wo i kekiwua twehm mat hab waap wo wohokamch mat uhpam e chegito g tkownalig jesus t hemho wa d wo hema tahchimk mach ga hujed i wehmajkahim g jesus am i amjed mat g john pahl wako am hugkam mat im hu hih dahm kahchim ch ed neh bash kaij g peter ch am i haasa neo 
 </code></pre>
 
 
-<p> following is an editted script that does give the correct output. I chose to include this as well as the not-quite-working script, because this working script is less intuitive then the last code but returns the correct format. I added comments to each step to descripe the code and make the process more transparent. <br> ADD EDITED SOURCE CODE HERE</p>
-
+<p> following is an editted script that does give the correct output. I chose the previous script as well as this working one, because this working script is much less intuitive then the previous script. I added comments to each step to descripe the code and make the process more transparent. <br> ADD EDITED SOURCE CODE HERE</p>
 
 <p>running this code in the same directory as the tsv file writes and returns three txt files contianing the preprocessed train, test, and dev sets into the directory where the code was initialized.</p>
 
-<p> The working code and tsv file of data can be accessed through this link:<br> https://github.com/CheyenneWing/Preparing-Data-for-Joey-NMT-Toolkit/tree/main/docs 
+<p> The working code and tsv file can be accessed through this link:<br> https://github.com/CheyenneWing/Preparing-Data-for-Joey-NMT-Toolkit/tree/main/docs 
 </p>
 
 <i>This research was funded by NSF-DEL and NSF-GRFP. Other contributers include Dr. Graham Neubig and Dr. Antonios Anastasopoulos. Copywrite for the bible translation used is held by © 2010, Wycliffe Bible Translators, Inc. All rights reserved.

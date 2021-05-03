@@ -123,8 +123,10 @@ act|||so now we have to choose someone who has been with us the whole time that 
 
 <p>running this code in the same directory as the tsv file writes and returns three txt files contianing the preprocessed train, test, and dev sets into the directory where the code was initialized.</p>
 
-<p> The working code and tsv file can be accessed through this link:<br> https://github.com/CheyenneWing/Preparing-Data-for-Joey-NMT-Toolkit/tree/main/docs 
+<p> The complete tsv file and working code can be accessed through this link:<br> https://github.com/CheyenneWing/Preparing-Data-for-Joey-NMT-Toolkit/tree/main/docs 
 </p>
+
+
 
 <i>This research was funded by NSF-DEL and NSF-GRFP. Other contributers include Dr. Graham Neubig and Dr. Antonios Anastasopoulos. Copywrite for the bible translation used is held by © 2010, Wycliffe Bible Translators, Inc. All rights reserved.
 </i>

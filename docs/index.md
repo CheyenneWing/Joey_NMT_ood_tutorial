@@ -9,7 +9,7 @@
 
 <h2> Parallel Text Sources</h2>  
 
-<p>Many translations of the Bible have been made for less-resourced and endangered languges. If you are interested in using Joey NMT for a less-resourced languages, you might begin by searching for a Bible translaion. For training Tohono O'odham I used a translation of the New Testement from Wycliffe Bible Translators, Inc. It can be viewed here: https://ebible.org/find/details.php?id=oodNT 
+<p>Many translations of the Bible have been made for less-resourced and endangered languges. If you are interested in using Joey NMT for a less-resourced languages, you might begin by searching for a Bible translaion. For training Tohono O'odham (also written as ood) I used a translation of the New Testement from Wycliffe Bible Translators, Inc. It can be viewed here: https://ebible.org/find/details.php?id=oodNT 
 </p>
 
 <h2> Expected Format</h2>
@@ -27,7 +27,7 @@
   
 <h2> Creating Parallel Text</h2> 
 
-<p>start with a tsv (Tab Separated Values) file of the source and target language. Each verse in English is separated by a tab and then the coresponding verse in Tohono O'odham 
+<p>start with a tsv (Tab Separated Values) file of the source and target language. Each verse in English is separated by a tab and then the coresponding verse in ood. 
 </p>
 
 <p>Here is an example of the eng-ood.tsv file.

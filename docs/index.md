@@ -110,7 +110,7 @@
 
 <p> If we print the length of each list we see there are 5728 parallel verses in train, 716 in test, and 716 in dev. This is the 80/10/10 division we want from the dataset! </p> 
 
-Following are three examples from the dev data. You can see that it is closer to expected format example above, but not quite perfect. Here we have triple bars to the beginning of the eng verse when we only want triple bars inbetween the source and target code in each verse. It also leaves part of the reference in some verses.
+Following is a sample of three verses from the dev set. You can see that it is closer to expected format example above, but not quite perfect. Here we have triple bars to the beginning of the eng verse when we only want triple bars inbetween the source and target code in each verse. It also leaves part of the reference in some verses.
 
 <pre><code>
 |||i hope to see you soon so we can talk face to face  |||nani pi am shimimk mant wo mneid k wo mwehm neo ab amjed 
@@ -122,6 +122,10 @@ act|||so now we have to choose someone who has been with us the whole time that 
 <p> following is an editted script that returns the correct output. I chose to include the broken script as well as this working script, because this working script is much less intuitive then the broken script, and doesn't make the necessary steps as clear. I have added comments to each step in the following script to descripe the code and make the process more transparent. <br> ADD EDITED SOURCE CODE HERE</p>
 
 <p>running this code in the same directory as the tsv file writes and returns three txt files contianing the preprocessed train, test, and dev sets into the directory where the code was initialized.</p>
+
+Following is a final sample of successfully preprocessed data! 
+<pre><code>
+</code></pre>
 
 <p> The complete tsv file and working code can be accessed through this link:<br> https://github.com/CheyenneWing/Preparing-Data-for-Joey-NMT-Toolkit/tree/main/docs 
 </p>

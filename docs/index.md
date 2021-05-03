@@ -1,4 +1,4 @@
-<p> test14</p>
+<p> test15</p>
 <h1>Preparing Data for Joey NMT Toolkit</h1>
 
 <h2>Introduction</h2>
@@ -9,7 +9,7 @@
 
 <h2> Parallel Text Sources</h2>  
 
-<p>Many translations of the Bible have been made for less-resourced and endangered languges. If you looking for data for a less-resourced languages, searching for Bible translaion can be a good place to start. For preparing data for Joey NMT in Tohono O'odham I used the "Jiosh Wechij O'ohana" English to Tohono O'odham translation of the New Testament from Wycliffe Bible Translators, Inc. The English to Tohono O'odham translation of the New Testament "Jiosh Wechij O'ohana" can be viewed by following this link: https://ebible.org/find/details.php?id=oodNT 
+<p>Many translations of the Bible have been made for less-resourced and endangered languges. If you are looking for data for a less-resourced languages, searching for Bible translaion can be a good place to start. For preparing data for Joey NMT in Tohono O'odham I used the "Jiosh Wechij O'ohana" English to Tohono O'odham translation of the New Testament from Wycliffe Bible Translators, Inc. The English to Tohono O'odham translation of the New Testament "Jiosh Wechij O'ohana" can be viewed by following this link: https://ebible.org/find/details.php?id=oodNT 
 </p>
 
 <h2> Expected Format</h2>
@@ -30,7 +30,7 @@
 <p>Start with a tsv (Tab Separated Values) file of the source and target language. Each verse in English is separated by a tab and then the coresponding verse in ood. 
 </p>
 
-<p>Following is an example data in a tsv file format.
+<p>Following is an sample of the eng-ood data in a tsv file format.
 </p>
   
 <pre><code>1CO01:2	It is sent to the church of God in Corinth, those who are being made right in Christ Jesus, called to live holy lives—and to everyone who worships the Lord Jesus Christ everywhere, the Lord both of them and of us.  Jiosh at ab i em-gawulkai mamt d wo hemajkamgajk. Kumt heg hekaj ab i e hemakoj wehsijj t-wehm ahchim mach hab waꞌap ab ihm g t-kownalig Jesus Christ.
@@ -38,7 +38,7 @@
     1CO01:4	I'm always thanking God for you because of the grace of God given to you in Christ Jesus.  	Chum ani hekid ab si hoꞌigeꞌid g Jiosh em-hekaj. Ab amt i s-wohoch g Christ. T g Jiosh ab i em-mah g geꞌe i wehmtadag.
 </code></pre>
     
-<p> To finish preprocessing the data in the tsv file and make it look like the expected format example we need to: 
+<p> To finish preprocessing the data in the tsv file and make it look like the expected format we need to: 
 </p> 
   
 <ol>

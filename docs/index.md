@@ -161,15 +161,15 @@ HEB|||He was placed much higher than the angels since he received a greater name
    
 </code></pre>
 
-<p>running this code in the same directory as the tsv file will write three txt files contianing the preprocessed train, test, and dev sets into the directory where the code was initialized. </p>
+<p>Running this code in the same directory as the tsv file will write three txt files contianing the preprocessed train, test, and dev sets into the directory where the code was initialized. </p>
 
-Following is a final sample of successfully preprocessed data! 
+<p>Following is a final sample of successfully preprocessed data!</p> 
 <pre><code>&lt;sax&gt; If it works out for me to go too, they can come with me. ||| Kunt ahni am epai wo ha oi matp d wo Jiosh tatchuik mant am wo hih.
 &lt;sax&gt; Whatever you do, do it in love. ||| ch ab wo e chehgidch wehs haꞌichu k ed mam ab si pihk e elid wehs ha hekaj.
 &lt;sax&gt; My love to all of you in Christ Jesus. Amen. ||| Ab ani si pihk ni‑elid wehs em‑hekaj ahpim ni‑wehm wohochuddam.
 </code></pre>
 
-<p> The complete tsv file and working code can be accessed here <a>https://github.com/CheyenneWing/Preparing-Data-for-Joey-NMT-Toolkit/tree/main/docs</a> 
+<p> The whole tsv file of data, working source code, and output txts can be accessed here <a>https://github.com/CheyenneWing/Preparing-Data-for-Joey-NMT-Toolkit/tree/main/docs</a> 
 </p>
 <p><span style="color:Black"><i>This research was funded by NSF-DEL and NSF-GRFP. Other contributers include Dr. Graham Neubig and Dr. Antonios Anastasopoulos. Copywrite for the bible translation used is held by © 2010, Wycliffe Bible Translators, Inc. All rights reserved.
  </i></span></p>

@@ -51,68 +51,67 @@
 
 
 <p> NOTE: the following code is <b>not</b> the finished working script</p>
-<span class="line-number">
+<pre class="line-number">
   <code class="language-python">
-  
-    import re
+import re
 
-    # open and read the English to Tohono O'odham verses from tsv file
-    tsv = open('eng-ood_NT.tsv')
-    NT = tsv.read()
+# open and read the English to Tohono O'odham verses from tsv file
+tsv = open('eng-ood_NT.tsv')
+NT = tsv.read()
 
-    # remove chapter and verse number from beginning of each line
-    rm_num = re.sub(r'(\d.*\d)','',NT)
+# remove chapter and verse number from beginning of each line
+rm_num = re.sub(r'(\d.*\d)','',NT)
 
-    # remove the tab separating source and target language and replace it with triple bars
-    add_trip_bars = re.sub(r'\t','|||',rm_num).strip()
+# remove the tab separating source and target language and replace it with triple bars
+add_trip_bars = re.sub(r'\t','|||',rm_num).strip()
 
-    # split verses at newline
-    verse_sep = add_trip_bars.split('\n')
+# split verses at newline
+verse_sep = add_trip_bars.split('\n')
     
   </code>
-</span>
+</pre>
 
 <p> The final step in preprocessing is to split the data into train, test, and dev sets. Here the data is split 80% train, 10% test, and %10 dev. Now we don't want to split the data into train, test, and dev sets as it currently is. If we did then entire books would be assigned to sets together. Instead we want to diversify the data we write to the 3 sets for a more accurate view of all the whole dataset. One way to do this is to iterate through ten verses at a time, then append 1 verse to dev, 1 verse to test, and the remaining 8 to train. This accomplishes the task of splitting the data into 80% train, 10% test, and 10% dev while also ensurring that each set is an accurate representation of the data set as a whole. 
 </p>
 
 <p>NOTE: the following code is <b>not</b> the finished working script</p>
-<span class="line-number">
+<pre class="line-number">
   <code class="language-python">
   
-    # make empty train, test, dev lists
-    train = []
-    test = []
-    dev = []
+# make empty train, test, dev lists
+train = []
+test = []
+dev = []
 
-    # use modulo operator in Python to sep 10% of data to dev, 10 % to test, 
-    # and remaining 80% to train 
-    for i,example in enumerate(verse_sep):
-        # if modulo operator returns 1 append to dev set
-        if i % 10 == 1:
-            dev.append(example)
-        # if modulo operator returns 2 append to test set
-        elif i % 10 == 2:
-            test.append(example)
-        # append remaining 8 to train
-        else:
-            train.append(example)
-    print(len(dev))
-    print(len(test))
-    print(len(train))
+# use modulo operator in Python to sep 10% of data to dev, 10 % to test, 
+# and remaining 80% to train 
+for i,example in enumerate(verse_sep):
+    # if modulo operator returns 1 append to dev set
+    if i % 10 == 1:
+        dev.append(example)
+    # if modulo operator returns 2 append to test set
+    elif i % 10 == 2:
+        test.append(example)
+    # append remaining 8 to train
+    else:
+        train.append(example)
+print(len(dev))
+print(len(test))
+print(len(train))
 
-    # write out the train, test, and dev lists to files
-    with open('eng-ood_dev.txt', 'w') as filehandle:
-        for listitem in dev:
-            filehandle.write('%s\n' % listitem)
-    with open('eng-ood_test.txt', 'w') as filehandle:
-        for listitem in test:
-            filehandle.write('%s\n' % listitem)
-    with open('eng-ood_train.txt', 'w') as filehandle:
-        for listitem in train:
-            filehandle.write('%s\n' % listitem) 
+# write out the train, test, and dev lists to files
+with open('eng-ood_dev.txt', 'w') as filehandle:
+    for listitem in dev:
+        filehandle.write('%s\n' % listitem)
+with open('eng-ood_test.txt', 'w') as filehandle:
+    for listitem in test:
+        filehandle.write('%s\n' % listitem)
+with open('eng-ood_train.txt', 'w') as filehandle:
+    for listitem in train:
+        filehandle.write('%s\n' % listitem) 
   
   </code>
-</span>
+</pre>
 
 <p> If we print the length of each set we see there are 5728 parallel verses in train, 716 in test, and 716 in dev. This is the 80/10/10 division we want from the dataset! </p> 
 

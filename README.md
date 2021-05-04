@@ -1,1 +1,1 @@
-# hello-world
+This repo holds the source code, data, and output txts for the "Preparing Data for Joey NMT Toolkit" tutorial. The GitHubPage for this toolkit can be viewed here: https://cheyennewing.github.io/Preparing-Data-for-Joey-NMT-Toolkit/

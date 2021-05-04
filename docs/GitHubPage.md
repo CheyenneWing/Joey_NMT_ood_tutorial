@@ -1,4 +1,4 @@
-<p>test27</p>
+<p>test28</p>
 <h1><span style="color:SteelBlue">Preparing Data for Joey NMT Toolkit</span></h1>
 
 <h2><span style="color:SteelBlue">Introduction</span></h2>
@@ -119,7 +119,11 @@ JHN|||This was the third time Jesus had appeared to the disciples after being ra
 HEB|||He was placed much higher than the angels since he received a greater name than them.  |||Neh, bo wa masma am e chehgidch mo id d alidaj g Jiosh. K heg hekaj tasho mo baꞌich d i si s-has haꞌichu mo hi g anghil.
 </code></pre>
 
-<p> following is an editted script that returns the correct output. I chose to include the broken script above, as well as this working script, because this working script is much less intuitive. I have added comments to each step in the following script to descripe the code and make the process more transparent.</p>
+<p> following is an editted script that returns the correct output. I chose to include the script above, as well as this working script bellow, because this working script is much less intuitive. I have added comments to try and make the process more transparent.</p>
+
+<pre class="line-number"><code class="language-python">
+    Place Holder
+</code></pre>
 
 <p>running this code in the same directory as the tsv file will write three txt files contianing the preprocessed train, test, and dev sets into the directory where the code was initialized. </p>
 

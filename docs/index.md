@@ -130,7 +130,7 @@ HEB|||He was placed much higher than the angels since he received a greater name
         with open("eng-ood_dev.txt", 'w') as dev_file:
             with open("eng-ood_test.txt", 'w') as test_file:
 
-                # assign index to each line with enumerate()
+               # assign index to each line with enumerate()
 		# remember each line in the tsv file is a verse
 		for i,line in enumerate(lines):
 			# strip extra white space from each line

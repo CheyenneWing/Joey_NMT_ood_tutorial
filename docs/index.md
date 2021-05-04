@@ -46,7 +46,7 @@
 <ol>
   <li>Remove New Testament book, chapter, and verse numbers from each entry</li>
   <li>Incert tripple bars between the source and target languages </li> 
-  <li>Separate data into train, test, and dev sets
+  <li>Separate data into train, test, and dev sets</li>
 </ol>
 
 
@@ -140,5 +140,5 @@ Following is a final sample of successfully preprocessed data!
 
 
 
-<p style="color:#FF0000";><i>This research was funded by NSF-DEL and NSF-GRFP. Other contributers include Dr. Graham Neubig and Dr. Antonios Anastasopoulos. Copywrite for the bible translation used is held by © 2010, Wycliffe Bible Translators, Inc. All rights reserved.
-</i></p>
+<p><span style="color:red"><i>This research was funded by NSF-DEL and NSF-GRFP. Other contributers include Dr. Graham Neubig and Dr. Antonios Anastasopoulos. Copywrite for the bible translation used is held by © 2010, Wycliffe Bible Translators, Inc. All rights reserved.
+</i></span>!</p>

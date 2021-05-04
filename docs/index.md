@@ -1,5 +1,5 @@
 <p> test21</p>
-<h1>Preparing Data for Joey NMT Toolkit</h1>
+<h1><span style="color:SteelBlue">Preparing Data for Joey NMT Toolkit</span></h1>
 
 <h2>Introduction</h2>
 
@@ -25,7 +25,7 @@
 <p> The tag &lt;sax&gt; is used here becasue the target data was collected in two orthographies. "Jiosh Wechij O'ohana" is written in the Saxton-Saxton orthography &lt;sax&gt;, while additional parallel texts were sourced from a ood dictionary examples written in the Alvares-Hale orthography &lt;ah&gt;. Tagging the beginning of each verse is only necessary if you are using data in multiple orthograhies. 
 </p>
  
- <p><span style="color:Gainsboro"> A Note on Tokenization and Truecasing: For the purposes of Joey NMT it is not necessary to tokenize or truecase data like when preparing real tranlation data. To respect the copyright on the Tohono O'odham New Testament translation, "Jiosh Wechij O'ohana", I have not applied tokenization or truecased the data.</span></p> 
+ <p><i> A Note on Tokenization and Truecasing: For the purposes of Joey NMT it is not necessary to tokenize or truecase data like when preparing real tranlation data. To respect the copyright on the Tohono O'odham New Testament translation, "Jiosh Wechij O'ohana", I have not applied tokenization or truecased the data.</i></p> 
   
 <h2> Creating Parallel Text</h2> 
 
@@ -137,6 +137,5 @@ Following is a final sample of successfully preprocessed data!
 <p> The complete tsv file and working code can be accessed through this link:<br> https://github.com/CheyenneWing/Preparing-Data-for-Joey-NMT-Toolkit/tree/main/docs 
 </p>
 <br>
-<br>
-<p><span style="color:Gainsboro"><i>This research was funded by NSF-DEL and NSF-GRFP. Other contributers include Dr. Graham Neubig and Dr. Antonios Anastasopoulos. Copywrite for the bible translation used is held by © 2010, Wycliffe Bible Translators, Inc. All rights reserved.
+<p><span style="color:LightGray"><i>This research was funded by NSF-DEL and NSF-GRFP. Other contributers include Dr. Graham Neubig and Dr. Antonios Anastasopoulos. Copywrite for the bible translation used is held by © 2010, Wycliffe Bible Translators, Inc. All rights reserved.
 </i></span></p>

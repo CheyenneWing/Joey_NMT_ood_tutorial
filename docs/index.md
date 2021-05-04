@@ -1,10 +1,9 @@
-<p>test32</p>
 <h1><span style="color:SteelBlue">Preparing Data for Joey NMT Toolkit</span></h1>
 
 <h2><span style="color:SteelBlue">Introduction</span></h2>
 
 <p>Joey NMT is a neural machine translation toolkit that aims to be accessible to novice learners.
- Joey NMT requires parallel text of the source language immediately followed by a translation from the       target language. This tutorial focuses on preparing data from less-resources languages through examples of  data preperation for the Tohono O'odham language (ISO code ood). Tohono O'odham is an endangered and less-resourced Native American language originating from southern Arizona and north-western Mexico.
+ Joey NMT requires parallel text of the source language immediately followed by a translation from the       target language. This tutorial focuses on preparing data for less-resources languages from bible translations. I demonstrate the process here with examples from Tohono O'odham language (ISO code ood). Tohono O'odham is an endangered and less-resourced Native American language originating from southern Arizona and north-western Mexico.
 </p>
 
 <h2><span style="color:SteelBlue">Parallel Text Sources</span></h2>  

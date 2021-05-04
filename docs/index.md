@@ -86,7 +86,7 @@
     for i,line in enumerate(verse_sep):
         # use modulo operator in Python to sep 10% of data to dev, 10 % to test, 
         # and remaining 80% to train 
-        # if the remainder of i/10 == 0 append to dev set
+        # if the remainder of i/10 equals 0 append to dev set
         if i % 10 == 0:
             dev.append(line)
         # if the remainder of i/10 equals 1 append to test set

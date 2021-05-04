@@ -1,18 +1,18 @@
-<p> test21</p>
+<p> test22</p>
 <h1><span style="color:SteelBlue">Preparing Data for Joey NMT Toolkit</span></h1>
 
-<h2>Introduction</h2>
+<h2><span style="color:SteelBlue">Introduction<</span>/h2>
 
 <p>Joey NMT is a neural machine translation toolkit that aims to be accessible to novice learners.
  Joey NMT requires parallel text of the source language immediately followed by a translation from the       target language. This tutorial focuses on preparing data from less-resources languages through examples of  data preperation for the Tohono O'odham language (ISO code ood). Tohono O'odham is an endangered and less-resourced Native American language originating from southern Arizona and north-western Mexico.
 </p>
 
-<h2> Parallel Text Sources</h2>  
+<h2><span style="color:SteelBlue">Parallel Text Sources</span></h2>  
 
 <p>Many translations of the Bible have been made for less-resourced. When looking for data for a less-resourced languages, searching for a Bible translaion can be a good place to start. For preparing ood data for Joey NMT I used the "Jiosh Wechij O'ohana" and English (ISO code eng) to ood translation of the New Testament from Wycliffe Bible Translators, Inc. "Jiosh Wechij O'ohana" can be viewed through this link: https://ebible.org/find/details.php?id=oodNT 
 </p>
 
-<h2> Expected Format</h2>
+<h2><span style="color:SteelBlue">Expected Format</span></h2>
 
  <p>The text below is parallel eng to ood text. The text of the source language is first, followed by the target language. Triple bars are used to divide the two languages. This is an sample of 3 parallel verses after being correctly preprocessed.
 </p>
@@ -27,7 +27,7 @@
  
  <p><i> A Note on Tokenization and Truecasing: For the purposes of Joey NMT it is not necessary to tokenize or truecase data like when preparing real tranlation data. To respect the copyright on the Tohono O'odham New Testament translation, "Jiosh Wechij O'ohana", I have not applied tokenization or truecased the data.</i></p> 
   
-<h2> Creating Parallel Text</h2> 
+<h2><span style="color:SteelBlue">Creating Parallel Text</span></h2> 
 
 <p>Start with a tsv (Tab Separated Values) file of the source and target language. Each eng verse is separated by a tab followed by the coresponding verse in ood. 
 </p>
@@ -136,6 +136,5 @@ Following is a final sample of successfully preprocessed data!
 
 <p> The complete tsv file and working code can be accessed through this link:<br> https://github.com/CheyenneWing/Preparing-Data-for-Joey-NMT-Toolkit/tree/main/docs 
 </p>
-<br>
-<p><span style="color:LightGray"><i>This research was funded by NSF-DEL and NSF-GRFP. Other contributers include Dr. Graham Neubig and Dr. Antonios Anastasopoulos. Copywrite for the bible translation used is held by © 2010, Wycliffe Bible Translators, Inc. All rights reserved.
-</i></span></p>
+<p><i>This research was funded by NSF-DEL and NSF-GRFP. Other contributers include Dr. Graham Neubig and Dr. Antonios Anastasopoulos. Copywrite for the bible translation used is held by © 2010, Wycliffe Bible Translators, Inc. All rights reserved.
+</i></p>

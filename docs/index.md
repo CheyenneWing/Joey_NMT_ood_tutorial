@@ -157,8 +157,7 @@ HEB|||He was placed much higher than the angels since he received a greater name
 			    test_file.write(f"<sax> {eng} ||| {ood}\n")
 			# write remaining lines to train
 			else:
-			    train_file.write(f"<sax> {eng} ||| {ood}\n")
-   
+			    train_file.write(f"<sax> {eng} ||| {ood}\n") 
 </code></pre>
 
 <p>Running this code in the same directory as the tsv file will write three txt files contianing the preprocessed train, test, and dev sets into the directory where the code was initialized. </p>

@@ -136,9 +136,9 @@ HEB|||He was placed much higher than the angels since he received a greater name
 			# strip extra white space from each line
 			# split the source and target language at tab
 			line = line.strip().split('\t')
-			# assign the variable eng to index l[1] and strip white space
+			# assign the variable eng to index line[1] and strip white space
 			 eng = line[1].strip()
-			# assign the variable ood l[2] and strip white space
+			# assign the variable ood line[2] and strip white space
 			ood = line[2].strip()
 
 			# use modulo operator on the verse's index to sep 10% of data to dev, 10 % to test, 

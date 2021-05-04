@@ -123,8 +123,6 @@ HEB|||He was placed much higher than the angels since he received a greater name
 
 <p> following is an editted script that returns the correct output. I chose to include the script above, as well as this working script bellow, because this working script is much less intuitive. I have added comments to try and make the process more transparent.</p>
 
-<pre class="line-number"><code class="language-python">
-
     # open and read tsv file of parallel verses line by line
     with open('eng-ood_NT.tsv') as inp:
 	lines = inp.readlines()
@@ -158,7 +156,7 @@ HEB|||He was placed much higher than the angels since he received a greater name
 			# write remaining lines to train
 			else:
 			    train_file.write(f"<sax> {eng} ||| {ood}\n") 
-</code></pre>
+
 
 <p>Running this code in the same directory as the tsv file will write three txt files contianing the preprocessed train, test, and dev sets into the directory where the code was initialized. </p>
 

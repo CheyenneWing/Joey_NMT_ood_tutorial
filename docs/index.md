@@ -1,4 +1,4 @@
-<p> test26</p>
+<p>test27</p>
 <h1><span style="color:SteelBlue">Preparing Data for Joey NMT Toolkit</span></h1>
 
 <h2><span style="color:SteelBlue">Introduction</span></h2>
@@ -25,7 +25,7 @@
 <p> The tag &lt;sax&gt; is used here becasue the target data was collected in two orthographies. "Jiosh Wechij O'ohana" is written in the Saxton-Saxton orthography &lt;sax&gt;, while additional parallel texts were sourced from a ood dictionary examples written in the Alvares-Hale orthography &lt;ah&gt;. Tagging the beginning of each verse is only necessary if you are using data in multiple orthograhies. 
 </p>
  
- <h4><span style="color:Black"> A Note on Tokenization and Truecasing: For the purposes of Joey NMT it is not necessary to tokenize or truecase data like when preparing real tranlation data. To respect the copyright on the Tohono O'odham New Testament translation, "Jiosh Wechij O'ohana", I have not applied tokenization or truecased the data.</span></h4> 
+ <h4><b>A Note on Tokenization and Truecasing: For the purposes of Joey NMT it is not necessary to tokenize or truecase data like when preparing real tranlation data. To respect the copyright on the Tohono O'odham New Testament translation, "Jiosh Wechij O'ohana", I have not applied tokenization or truecased the data.</b></h4> 
   
 <h2><span style="color:SteelBlue">Creating Parallel Text</span></h2> 
 

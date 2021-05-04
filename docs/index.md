@@ -9,24 +9,24 @@
 
 <h2> Parallel Text Sources</h2>  
 
-<p>Many translations of the Bible have been made for less-resourced and endangered languges. If you are looking for data for a less-resourced languages, searching for Bible translaion can be a good place to start. For preparing data for Joey NMT in Tohono O'odham I used the "Jiosh Wechij O'ohana" English to Tohono O'odham translation of the New Testament from Wycliffe Bible Translators, Inc. The English to Tohono O'odham translation of the New Testament "Jiosh Wechij O'ohana" can be viewed by following this link: https://ebible.org/find/details.php?id=oodNT 
+<p>Many translations of the Bible have been made for less-resourced. When looking for data for a less-resourced languages, searching for a Bible translaion can be a good place to start. For preparing ood data for Joey NMT I used the "Jiosh Wechij O'ohana" and English (ISO code eng) to ood translation of the New Testament from Wycliffe Bible Translators, Inc. "Jiosh Wechij O'ohana" can be viewed through this link: https://ebible.org/find/details.php?id=oodNT 
 </p>
 
 <h2> Expected Format</h2>
 
- <p>The text below is parallel text is provided from verses. The text of the source language is first, followed by the target language. Triple bars are used to divide the two languages. This is an sample of 3 parallel verses after being correctly preprocessed.
+ <p>The text below is parallel eng to ood text. The text of the source language is first, followed by the target language. Triple bars are used to divide the two languages. This is an sample of 3 parallel verses after being correctly preprocessed.
 </p>
 
-<pre><code> \<sax\> In fact the testimony of Christ was proved valid in your experience, ||| Am o e chehgidch mam s-wihnam an uꞌukch g haꞌichu t-ahga ab amjed g Christ.
-\<sax\> so that you're not missing any spiritual gift as you wait for the coming of our Lord Jesus Christ. ||| Kum wehs ab i neid g hoꞌigeꞌidadgaj ch ep nenida mat ep wo jiwia.
-\<sax\> I came to you in weakness, fearful and trembling. ||| ch heg hekaj si s‑gihug ch gigiwuk.
+<pre><code> \<sax> In fact the testimony of Christ was proved valid in your experience, ||| Am o e chehgidch mam s-wihnam an uꞌukch g haꞌichu t-ahga ab amjed g Christ.
+\<sax> so that you're not missing any spiritual gift as you wait for the coming of our Lord Jesus Christ. ||| Kum wehs ab i neid g hoꞌigeꞌidadgaj ch ep nenida mat ep wo jiwia.
+\<sax> I came to you in weakness, fearful and trembling. ||| ch heg hekaj si s‑gihug ch gigiwuk.
 </code></pre>
     
-<p> The tag \<sax\> is used here becasue the target language data was provided in two orthographies. "Jiosh Wechij O'ohana" is written in the Saxton-Saxton orthography \<sax\>, while additional parallel texts used were gather from an dictionary examples written in the Alvares-Hale orthography \<ah\>. Tagging the beginning of each verse is only necessary if you are using data in multiple orthograhies. 
+<p> The tag \<sax> is used here becasue the target data was collected in two orthographies. "Jiosh Wechij O'ohana" is written in the Saxton-Saxton orthography \<sax>, while additional parallel texts were sourced from a ood dictionary examples written in the Alvares-Hale orthography \<ah>. Tagging the beginning of each verse is only necessary if you are using data in multiple orthograhies. 
 </p>
  
- <h3> A note on tokenization and truecasing</h3>
- <p style="color:#E0DDDC";> For the purposes of Joey NMT it is not necessary to tokenize or truecase data like when preparing real tranlation data. To respect the copyright on the Tohono O'odham New Testament translation, "Jiosh Wechij O'ohana", I have not applied tokenization or truecased the data.</p> 
+ <h4> A note on tokenization and truecasing</h4>
+ <p style="color:#FF0000";> For the purposes of Joey NMT it is not necessary to tokenize or truecase data like when preparing real tranlation data. To respect the copyright on the Tohono O'odham New Testament translation, "Jiosh Wechij O'ohana", I have not applied tokenization or truecased the data.</p> 
   
 <h2> Creating Parallel Text</h2> 
 

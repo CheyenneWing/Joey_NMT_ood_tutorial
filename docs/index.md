@@ -1,4 +1,4 @@
-<p> test19</p>
+<p> test20</p>
 <h1>Preparing Data for Joey NMT Toolkit</h1>
 
 <h2>Introduction</h2>
@@ -44,7 +44,7 @@
 </p> 
   
 <ol>
-  <li>Remove New Testament book, chapter, and verse numbers from each entry</li>
+  <li>Remove book name, chapter number, and verse numbers from the beginning of each verse</li>
   <li>Incert tripple bars between the source and target languages </li> 
   <li>Separate data into train, test, and dev sets</li>
 </ol>
@@ -119,9 +119,9 @@
 Following is a sample of three verses after running this script. You can see that it is closer to expected format example above, but not quite perfect. Here we have triple bars at the beginning of the eng verse and ood verse, when we only want triple bars separating the source and target code in each verse. This script removes the chapter and verse numbers but not all the book names. We also haven't added the orthography tag
 &lt;sax> 
 
-<pre><code>|||i hope to see you soon so we can talk face to face  |||nani pi am shimimk mant wo mneid k wo mwehm neo ab amjed 
-act|||men of galilee why are you standing here staring at the sky they asked this same jesus who has been taken up from you to heaven shall come in the same way you saw him go into heaven |||ch hab kaij pi g ia hu wabsh wo gegokk ch am uhgk nenead mat hebai hih g jesus hema tash at wo wa uhpam jiwia hab masma mam hemuch am neid mat has i masma gam hu hih 
-act|||so now we have to choose someone who has been with us the whole time that jesus was with us  from the time john was baptizing up until the day jesus was taken up to heaven from us one of these must be chosen to join together with us as we witness giving evidence of jesus resurrection  |||kut id hekaj hemho wa am hema wo i kekiwua twehm mat hab waap wo wohokamch mat uhpam e chegito g tkownalig jesus t hemho wa d wo hema tahchimk mach ga hujed i wehmajkahim g jesus am i amjed mat g john pahl wako am hugkam mat im hu hih dahm kahchim ch ed neh bash kaij g peter ch am i haasa neo 
+<pre><code>|||Doesn't nature itself indicate that a man with long hair disgraces himself?  |||S‑mahch ach mo g cheꞌechew moꞌo s‑ta edama am wehhejed g cheoj 
+JHN|||This was the third time Jesus had appeared to the disciples after being raised from the dead. |||Id o d waꞌi waikkokam mad am i e chehgi g Jesus t‑wui amjed mad ab i wuhsh muhkig amjed. 
+HEB|||He was placed much higher than the angels since he received a greater name than them.  |||Neh, bo wa masma am e chehgidch mo id d alidaj g Jiosh. K heg hekaj tasho mo baꞌich d i si s-has haꞌichu mo hi g anghil.
 </code></pre>
 
 <p> following is an editted script that returns the correct output. I chose to include the broken script above, as well as this working script, because this working script is much less intuitive. I have added comments to each step in the following script to descripe the code and make the process more transparent.</p>

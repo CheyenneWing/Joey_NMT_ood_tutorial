@@ -3,17 +3,17 @@
 <h2><span style="color:SteelBlue">Introduction</span></h2>
 
 <p>Joey NMT is a neural machine translation toolkit that aims to be accessible to novice learners.
- Joey NMT requires parallel text of the source language immediately followed by a translation from the       target language. This tutorial focuses on preparing data for less-resources languages from bible translations. I demonstrate the process here with examples from Tohono O'odham language (ISO code ood). Tohono O'odham is an endangered and less-resourced Native American language originating from southern Arizona and north-western Mexico.
+ Joey NMT requires parallel text of the source language immediately followed by a translation from the       target language. This tutorial focuses on preparing data for less-resourced languages from Bible translations. I demonstrate the process here with examples from the Tohono O'odham language (ISO code ood). Tohono O'odham is an endangered and less-resourced Native American language originating from southern Arizona and north-western Mexico.
 </p>
 
 <h2><span style="color:SteelBlue">Parallel Text Sources</span></h2>  
 
-<p>Many translations of the Bible have been made for less-resourced. When looking for data for a less-resourced languages, searching for a Bible translaion can be a good place to start. For preparing ood data for Joey NMT I used the "Jiosh Wechij O'ohana" and English (ISO code eng) to ood translation of the New Testament from Wycliffe Bible Translators, Inc. "Jiosh Wechij O'ohana" can be viewed here: <a>https://ebible.org/find/details.php?id=oodNT</a> 
+<p>Many translations of the Bible have been made for less-resourced languages. When looking for data for a less-resourced language, searching for a Bible translaion can be a good place to start. For preparing ood data for Joey NMT I used the "Jiosh Wechij O'ohana" and English (ISO code eng) to ood translation of the New Testament from Wycliffe Bible Translators, Inc. "Jiosh Wechij O'ohana" can be viewed here: <a>https://ebible.org/find/details.php?id=oodNT</a> 
 </p>
 
 <h2><span style="color:SteelBlue">Expected Format</span></h2>
 
- <p>The text below is parallel eng to ood text. The text of the source language is first, followed by the target language. Triple bars are used to divide the two languages. This is an sample of 3 parallel verses after being correctly preprocessed.
+ <p>The text below is parallel eng to ood text. The text of the source language is first, followed by the target language. Triple bars are used to divide the two languages. This is a sample of 3 parallel verses after being correctly preprocessed.
 </p>
 
 <pre><code>&lt;sax&gt; In fact the testimony of Christ was proved valid in your experience, ||| Am o e chehgidch mam s-wihnam an uꞌukch g haꞌichu t-ahga ab amjed g Christ.
@@ -21,14 +21,14 @@
 &lt;sax&gt; I came to you in weakness, fearful and trembling. ||| ch heg hekaj si s‑gihug ch gigiwuk.
 </code></pre>
     
-<p> The tag &lt;sax&gt; is used here becasue the target data was collected in two orthographies. "Jiosh Wechij O'ohana" is written in the Saxton-Saxton orthography &lt;sax&gt;, while additional parallel texts were sourced from a ood dictionary examples written in the Alvares-Hale orthography &lt;ah&gt;. Tagging the beginning of each verse is only necessary if you are using data in multiple orthograhies. 
+<p> The tag &lt;sax&gt; is used here becasue the target data was collected in two orthographies. "Jiosh Wechij O'ohana" is written in the Saxton-Saxton orthography &lt;sax&gt;, while additional parallel texts were sourced from ood dictionary examples written in the Alvarez-Hale orthography &lt;ah&gt;. Tagging the beginning of each verse is only necessary if you are using data in multiple orthographies. 
 </p>
  
- <p><span style="color:SteelBlue"><b>A Note on Tokenization and Truecasing: For the purposes of Joey NMT it is not necessary to tokenize or truecase data like when preparing real tranlation data. To respect the copyright on the Tohono O'odham New Testament translation, "Jiosh Wechij O'ohana", I have not applied tokenization or truecased the data.</b></span></p> 
+ <p><span style="color:SteelBlue"><b>A Note on tokenization and truecasing: For the purposes of Joey NMT it is not necessary to tokenize or truecase data like when preparing real translation data. To respect the copyright on the Tohono O'odham New Testament translation, "Jiosh Wechij O'ohana", I have not applied tokenization or truecased the data.</b></span></p> 
   
 <h2><span style="color:SteelBlue">Creating Parallel Text</span></h2> 
 
-<p>Start with a tsv (Tab Separated Values) file of the source and target language. Each eng verse is separated by a tab followed by the coresponding verse in ood. 
+<p>Start with a tsv (Tab Separated Values) file of the source and target language. Each eng verse is separated by a tab followed by the corresponding verse in ood. 
 </p>
 
 <p>Following is an sample of the eng-ood data in a tsv file format.
@@ -44,7 +44,7 @@
   
 <ol>
   <li>Remove book name, chapter number, and verse numbers from the beginning of each verse</li>
-  <li>Incert tripple bars between the source and target languages </li> 
+  <li>Insert triple bars between the source and target languages </li> 
   <li>Separate data into train, test, and dev sets</li>
 </ol>
 
@@ -64,12 +64,12 @@
     # remove the tab separating source and target language and replace it with triple bars
     add_trip_bars = re.sub(r'\t','|||',rm_num).strip()
 
-    # split verses at newline
+    # split verses at new line
     verse_sep = add_trip_bars.split('\n')
     
 </code></pre>
 
-<p> The final step in preprocessing is to split the data into train, test, and dev sets. Here the data is split 80% train, 10% test, and %10 dev. Now we don't want to split the data into train, test, and dev sets as it currently is. If we did then entire books would be assigned to sets together. Instead we want to diversify the data we write to the 3 sets for a more accurate view of all the whole dataset. One way to do this is to iterate through ten verses at a time, then append 1 verse to dev, 1 verse to test, and the remaining 8 to train. This accomplishes the task of splitting the data into 80% train, 10% test, and 10% dev while also ensurring that each set is an accurate representation of the data set as a whole. 
+<p> The final step in preprocessing is to split the data into train, test, and dev sets. Here the data is split 80% train, 10% test, and 10% dev. We don't want to split the data into train, test, and dev sets as it currently is. If we did, then entire books would be assigned to sets together. Instead we want to diversify the data we write to the 3 sets for a more accurate view of the whole dataset. One way to do this is to iterate through ten verses at a time, then append 1 verse to dev, 1 verse to test, and the remaining 8 to train. This accomplishes the task of splitting the data into 80% train, 10% test, and 10% dev while also ensurring that each set is an accurate representation of the data set as a whole. 
 </p>
 
 <p>NOTE: the following code is <b>not</b> the finished working script</p>
@@ -81,7 +81,7 @@
     dev = []
     
     # assign index to each line with enumerate()
-			 # remember each line in the tsv file is a verse
+    # remember each line in the tsv file is a verse
     for i,line in enumerate(verse_sep):
         # use modulo operator in Python to sep 10% of data to dev, 10 % to test, 
         # and remaining 80% to train 
@@ -112,15 +112,14 @@
 
 <p> If we print the length of each set we see there are 5728 parallel verses in train, 716 in test, and 716 in dev. This is the 80/10/10 division we want from the dataset! </p> 
 
-Following is a sample of three verses after running this script. You can see that it is closer to expected format example above, but not quite perfect. Here we have triple bars at the beginning of the eng verse and ood verse, when we only want triple bars separating the source and target code in each verse. This script removes the chapter and verse numbers but not all the book names. We also haven't added the orthography tag
-&lt;sax> 
+<p>Following is a sample of three verses after running this script. You can see that it is closer to the expected format example above, but not quite perfect. Here we have triple bars at the beginning of the eng verse and ood verse, when we only want triple bars separating the source and target code in each verse. This script removes the chapter and verse numbers but not all the book names. We also haven't added the orthography tag &lt;sax>.</p> 
 
 <pre><code>|||Doesn't nature itself indicate that a man with long hair disgraces himself?  |||S‑mahch ach mo g cheꞌechew moꞌo s‑ta edama am wehhejed g cheoj 
 JHN|||This was the third time Jesus had appeared to the disciples after being raised from the dead. |||Id o d waꞌi waikkokam mad am i e chehgi g Jesus t‑wui amjed mad ab i wuhsh muhkig amjed. 
 HEB|||He was placed much higher than the angels since he received a greater name than them.  |||Neh, bo wa masma am e chehgidch mo id d alidaj g Jiosh. K heg hekaj tasho mo baꞌich d i si s-has haꞌichu mo hi g anghil.
 </code></pre>
 
-<p> following is an editted script that returns the correct output. I chose to include the script above, as well as this working script bellow, because this working script is much less intuitive. I have added comments to try and make the process more transparent.</p>
+<p> Following is an edited script that returns the correct output. I chose to include the script above, as well as this working script below, because this working script is much less intuitive. I have added comments to try to make the process more transparent.</p>
 
     # open and read tsv file of parallel verses line by line
     with open('eng-ood_NT.tsv') as inp:

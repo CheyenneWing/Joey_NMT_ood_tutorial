@@ -1,4 +1,4 @@
-<p> test17</p>
+<p> test18</p>
 <h1>Preparing Data for Joey NMT Toolkit</h1>
 
 <h2>Introduction</h2>
@@ -17,12 +17,12 @@
  <p>The text below is parallel eng to ood text. The text of the source language is first, followed by the target language. Triple bars are used to divide the two languages. This is an sample of 3 parallel verses after being correctly preprocessed.
 </p>
 
-<pre><code> \<sax> In fact the testimony of Christ was proved valid in your experience, ||| Am o e chehgidch mam s-wihnam an uꞌukch g haꞌichu t-ahga ab amjed g Christ.
-\<sax> so that you're not missing any spiritual gift as you wait for the coming of our Lord Jesus Christ. ||| Kum wehs ab i neid g hoꞌigeꞌidadgaj ch ep nenida mat ep wo jiwia.
-\<sax> I came to you in weakness, fearful and trembling. ||| ch heg hekaj si s‑gihug ch gigiwuk.
+<pre><code> &lt;sax&gt; In fact the testimony of Christ was proved valid in your experience, ||| Am o e chehgidch mam s-wihnam an uꞌukch g haꞌichu t-ahga ab amjed g Christ.
+&lt;sax&gt; so that you're not missing any spiritual gift as you wait for the coming of our Lord Jesus Christ. ||| Kum wehs ab i neid g hoꞌigeꞌidadgaj ch ep nenida mat ep wo jiwia.
+&lt;sax&gt; I came to you in weakness, fearful and trembling. ||| ch heg hekaj si s‑gihug ch gigiwuk.
 </code></pre>
     
-<p> The tag \<sax> is used here becasue the target data was collected in two orthographies. "Jiosh Wechij O'ohana" is written in the Saxton-Saxton orthography \<sax>, while additional parallel texts were sourced from a ood dictionary examples written in the Alvares-Hale orthography \<ah>. Tagging the beginning of each verse is only necessary if you are using data in multiple orthograhies. 
+<p> The tag &lt;sax&gt; is used here becasue the target data was collected in two orthographies. "Jiosh Wechij O'ohana" is written in the Saxton-Saxton orthography &lt;sax&gt;, while additional parallel texts were sourced from a ood dictionary examples written in the Alvares-Hale orthography &lt;ah&gt;. Tagging the beginning of each verse is only necessary if you are using data in multiple orthograhies. 
 </p>
  
  <h4> A note on tokenization and truecasing</h4>
@@ -37,8 +37,8 @@
 </p>
   
 <pre><code>1CO01:2	It is sent to the church of God in Corinth, those who are being made right in Christ Jesus, called to live holy lives—and to everyone who worships the Lord Jesus Christ everywhere, the Lord both of them and of us.  Jiosh at ab i em-gawulkai mamt d wo hemajkamgajk. Kumt heg hekaj ab i e hemakoj wehsijj t-wehm ahchim mach hab waꞌap ab ihm g t-kownalig Jesus Christ.
-    1CO01:3	May you have grace and peace from God our Father and the Lord Jesus Christ.  	Ab o wa si s-em-hoꞌigeꞌid g t-ohg Jiosh g t-kownalig Jesus Christ wehm ch ab wo wa baꞌich i em-mahkad g i wehmtadag ch s-ap tahhadkam.
-    1CO01:4	I'm always thanking God for you because of the grace of God given to you in Christ Jesus.  	Chum ani hekid ab si hoꞌigeꞌid g Jiosh em-hekaj. Ab amt i s-wohoch g Christ. T g Jiosh ab i em-mah g geꞌe i wehmtadag.
+1CO01:3	May you have grace and peace from God our Father and the Lord Jesus Christ.  	Ab o wa si s-em-hoꞌigeꞌid g t-ohg Jiosh g t-kownalig Jesus Christ wehm ch ab wo wa baꞌich i em-mahkad g i wehmtadag ch s-ap tahhadkam.
+1CO01:4	I'm always thanking God for you because of the grace of God given to you in Christ Jesus.  	Chum ani hekid ab si hoꞌigeꞌid g Jiosh em-hekaj. Ab amt i s-wohoch g Christ. T g Jiosh ab i em-mah g geꞌe i wehmtadag.
 </code></pre>
     
 <p> To finish preprocessing the data in the tsv file and make it look like the expected format we need to: 
@@ -116,7 +116,8 @@
 
 <p> If we print the length of each set we see there are 5728 parallel verses in train, 716 in test, and 716 in dev. This is the 80/10/10 division we want from the dataset! </p> 
 
-Following is a sample of three verses after running this script. You can see that it is closer to expected format example above, but not quite perfect. Here we have triple bars at the beginning of the eng verse and ood verse, when we only want triple bars separating the source and target code in each verse. This script removes the chapter and verse numbers but not all the book names.
+Following is a sample of three verses after running this script. You can see that it is closer to expected format example above, but not quite perfect. Here we have triple bars at the beginning of the eng verse and ood verse, when we only want triple bars separating the source and target code in each verse. This script removes the chapter and verse numbers but not all the book names. We also haven't added the orthography tag
+&lt;sax> 
 
 <pre><code>
 |||i hope to see you soon so we can talk face to face  |||nani pi am shimimk mant wo mneid k wo mwehm neo ab amjed 
@@ -129,9 +130,9 @@ act|||so now we have to choose someone who has been with us the whole time that 
 <p>running this code in the same directory as the tsv file will write three txt files contianing the preprocessed train, test, and dev sets into the directory where the code was initialized. </p>
 
 Following is a final sample of successfully preprocessed data! 
-<pre><code>\<sax\> If it works out for me to go too, they can come with me. ||| Kunt ahni am epai wo ha oi matp d wo Jiosh tatchuik mant am wo hih.
-\<sax\> Whatever you do, do it in love. ||| ch ab wo e chehgidch wehs haꞌichu k ed mam ab si pihk e elid wehs ha hekaj.
-\<sax\> My love to all of you in Christ Jesus. Amen. ||| Ab ani si pihk ni‑elid wehs em‑hekaj ahpim ni‑wehm wohochuddam.
+<pre><code>&lt;sax&gt; If it works out for me to go too, they can come with me. ||| Kunt ahni am epai wo ha oi matp d wo Jiosh tatchuik mant am wo hih.
+&lt;sax&gt; Whatever you do, do it in love. ||| ch ab wo e chehgidch wehs haꞌichu k ed mam ab si pihk e elid wehs ha hekaj.
+&lt;sax&gt; My love to all of you in Christ Jesus. Amen. ||| Ab ani si pihk ni‑elid wehs em‑hekaj ahpim ni‑wehm wohochuddam.
 </code></pre>
 
 <p> The complete tsv file and working code can be accessed through this link:<br> https://github.com/CheyenneWing/Preparing-Data-for-Joey-NMT-Toolkit/tree/main/docs 

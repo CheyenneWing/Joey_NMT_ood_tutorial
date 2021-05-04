@@ -1,4 +1,4 @@
-<p> test18</p>
+<p> test19</p>
 <h1>Preparing Data for Joey NMT Toolkit</h1>
 
 <h2>Introduction</h2>
@@ -17,7 +17,7 @@
  <p>The text below is parallel eng to ood text. The text of the source language is first, followed by the target language. Triple bars are used to divide the two languages. This is an sample of 3 parallel verses after being correctly preprocessed.
 </p>
 
-<pre><code> &lt;sax&gt; In fact the testimony of Christ was proved valid in your experience, ||| Am o e chehgidch mam s-wihnam an uꞌukch g haꞌichu t-ahga ab amjed g Christ.
+<pre><code>&lt;sax&gt; In fact the testimony of Christ was proved valid in your experience, ||| Am o e chehgidch mam s-wihnam an uꞌukch g haꞌichu t-ahga ab amjed g Christ.
 &lt;sax&gt; so that you're not missing any spiritual gift as you wait for the coming of our Lord Jesus Christ. ||| Kum wehs ab i neid g hoꞌigeꞌidadgaj ch ep nenida mat ep wo jiwia.
 &lt;sax&gt; I came to you in weakness, fearful and trembling. ||| ch heg hekaj si s‑gihug ch gigiwuk.
 </code></pre>
@@ -25,8 +25,7 @@
 <p> The tag &lt;sax&gt; is used here becasue the target data was collected in two orthographies. "Jiosh Wechij O'ohana" is written in the Saxton-Saxton orthography &lt;sax&gt;, while additional parallel texts were sourced from a ood dictionary examples written in the Alvares-Hale orthography &lt;ah&gt;. Tagging the beginning of each verse is only necessary if you are using data in multiple orthograhies. 
 </p>
  
- <h4> A note on tokenization and truecasing</h4>
- <p style="color:#FF0000";> For the purposes of Joey NMT it is not necessary to tokenize or truecase data like when preparing real tranlation data. To respect the copyright on the Tohono O'odham New Testament translation, "Jiosh Wechij O'ohana", I have not applied tokenization or truecased the data.</p> 
+ <p> A note on tokenization and truecasing<br>For the purposes of Joey NMT it is not necessary to tokenize or truecase data like when preparing real tranlation data. To respect the copyright on the Tohono O'odham New Testament translation, "Jiosh Wechij O'ohana", I have not applied tokenization or truecased the data.</p> 
   
 <h2> Creating Parallel Text</h2> 
 
@@ -49,6 +48,7 @@
   <li>Incert tripple bars between the source and target languages </li> 
   <li>Separate data into train, test, and dev sets
 </ol>
+
 
 <p> NOTE: the following code is <b>not</b> the finished working script</p>
 <pre class="line-number">
@@ -119,8 +119,7 @@
 Following is a sample of three verses after running this script. You can see that it is closer to expected format example above, but not quite perfect. Here we have triple bars at the beginning of the eng verse and ood verse, when we only want triple bars separating the source and target code in each verse. This script removes the chapter and verse numbers but not all the book names. We also haven't added the orthography tag
 &lt;sax> 
 
-<pre><code>
-|||i hope to see you soon so we can talk face to face  |||nani pi am shimimk mant wo mneid k wo mwehm neo ab amjed 
+<pre><code>|||i hope to see you soon so we can talk face to face  |||nani pi am shimimk mant wo mneid k wo mwehm neo ab amjed 
 act|||men of galilee why are you standing here staring at the sky they asked this same jesus who has been taken up from you to heaven shall come in the same way you saw him go into heaven |||ch hab kaij pi g ia hu wabsh wo gegokk ch am uhgk nenead mat hebai hih g jesus hema tash at wo wa uhpam jiwia hab masma mam hemuch am neid mat has i masma gam hu hih 
 act|||so now we have to choose someone who has been with us the whole time that jesus was with us  from the time john was baptizing up until the day jesus was taken up to heaven from us one of these must be chosen to join together with us as we witness giving evidence of jesus resurrection  |||kut id hekaj hemho wa am hema wo i kekiwua twehm mat hab waap wo wohokamch mat uhpam e chegito g tkownalig jesus t hemho wa d wo hema tahchimk mach ga hujed i wehmajkahim g jesus am i amjed mat g john pahl wako am hugkam mat im hu hih dahm kahchim ch ed neh bash kaij g peter ch am i haasa neo 
 </code></pre>
@@ -140,5 +139,6 @@ Following is a final sample of successfully preprocessed data!
 
 
 
-<i>This research was funded by NSF-DEL and NSF-GRFP. Other contributers include Dr. Graham Neubig and Dr. Antonios Anastasopoulos. Copywrite for the bible translation used is held by © 2010, Wycliffe Bible Translators, Inc. All rights reserved.
-</i>
+
+<p style="color:#FF0000";><i>This research was funded by NSF-DEL and NSF-GRFP. Other contributers include Dr. Graham Neubig and Dr. Antonios Anastasopoulos. Copywrite for the bible translation used is held by © 2010, Wycliffe Bible Translators, Inc. All rights reserved.
+</i></p>

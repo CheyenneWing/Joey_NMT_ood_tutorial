@@ -1,1 +1,1 @@
-This repo holds the source code, data, and output txts (see Docs folder) for the "Preparing Data for Joey NMT Toolkit" tutorial. The GitHubPage for this toolkit can be viewed here: https://cheyennewing.github.io/Preparing-Data-for-Joey-NMT-Toolkit/
+This repo holds the source code, data, and output txts (see docs folder) for the "Preparing Data for Joey NMT Toolkit" tutorial. The GitHubPage for this toolkit can be viewed here: https://cheyennewing.github.io/Preparing-Data-for-Joey-NMT-Toolkit/

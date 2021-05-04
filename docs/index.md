@@ -1,4 +1,4 @@
-<p>test28</p>
+<p>test29</p>
 <h1><span style="color:SteelBlue">Preparing Data for Joey NMT Toolkit</span></h1>
 
 <h2><span style="color:SteelBlue">Introduction</span></h2>
@@ -55,7 +55,7 @@
 
     import re
 
-    # open and read the English to Tohono O'odham verses from tsv file
+    # open and read the eng to ood verses from tsv file
     tsv = open('eng-ood_NT.tsv')
     NT = tsv.read()
 
@@ -81,18 +81,20 @@
     test = []
     dev = []
     
-    # use modulo operator in Python to sep 10% of data to dev, 10 % to test, 
-    # and remaining 80% to train 
-    for i,example in enumerate(verse_sep):
-        # if modulo operator returns 0 append to dev set
+    # assign index to each line with enumerate()
+			 # remember each line in the tsv file is a verse
+    for i,line in enumerate(verse_sep):
+        # use modulo operator in Python to sep 10% of data to dev, 10 % to test, 
+        # and remaining 80% to train 
+        # if the remainder of i/10 == 0 append to dev set
         if i % 10 == 0:
-            dev.append(example)
-        # if modulo operator returns 1 append to test set
+            dev.append(line)
+        # if the remainder of i/10 equals 1 append to test set
         elif i % 10 == 1:
-            test.append(example)
-        # append remaining 8 to train
+            test.append(line)
+        # append remaining lines to train
         else:
-            train.append(example)
+            train.append(line)
     print(len(dev))
     print(len(test))
     print(len(train))
@@ -122,7 +124,7 @@ HEB|||He was placed much higher than the angels since he received a greater name
 <p> following is an editted script that returns the correct output. I chose to include the script above, as well as this working script bellow, because this working script is much less intuitive. I have added comments to try and make the process more transparent.</p>
 
 <pre class="line-number"><code class="language-python">
-    Place Holder
+    
 </code></pre>
 
 <p>running this code in the same directory as the tsv file will write three txt files contianing the preprocessed train, test, and dev sets into the directory where the code was initialized. </p>

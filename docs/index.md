@@ -84,11 +84,11 @@
     # use modulo operator in Python to sep 10% of data to dev, 10 % to test, 
     # and remaining 80% to train 
     for i,example in enumerate(verse_sep):
-        # if modulo operator returns 1 append to dev set
-        if i % 10 == 1:
+        # if modulo operator returns 0 append to dev set
+        if i % 10 == 0:
             dev.append(example)
-        # if modulo operator returns 2 append to test set
-        elif i % 10 == 2:
+        # if modulo operator returns 1 append to test set
+        elif i % 10 == 1:
             test.append(example)
         # append remaining 8 to train
         else:

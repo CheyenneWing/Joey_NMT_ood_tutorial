@@ -144,11 +144,11 @@ HEB|||He was placed much higher than the angels since he received a greater name
 			# use modulo operator on the verse's index to sep 10% of data to dev, 10 % to test, 
 			# and remaining 80% to train
 			# if the remainder of i/10 equals 0
-			# write lines with orth tag, source language, triple bar, and target language to dev set
+			# then write lines with orth tag, source language, triple bar, and target language to dev set
 			if i % 10 == 0:
 				dev_file.write(f"<sax> {eng} ||| {ood}\n")
-			# # if the remainder of i/10 equals 1
-			# write lines with orth tag, source language, triple bar, and target language to test set
+			# if the remainder of i/10 equals 1
+			# then write lines with orth tag, source language, triple bar, and target language to test set
 			elif i % 10 == 1:
 			    test_file.write(f"<sax> {eng} ||| {ood}\n")
 			# write remaining lines to train
@@ -164,7 +164,7 @@ HEB|||He was placed much higher than the angels since he received a greater name
 &lt;sax&gt; My love to all of you in Christ Jesus. Amen. ||| Ab ani si pihk ni‑elid wehs em‑hekaj ahpim ni‑wehm wohochuddam.
 </code></pre>
 
-<p> The whole tsv file of data, working source code, and output txts can be accessed here <a>https://github.com/CheyenneWing/Preparing-Data-for-Joey-NMT-Toolkit/tree/main/docs</a> 
+<p> The whole tsv file of data, working source code, and output txts can be accessed here: <a>https://github.com/CheyenneWing/Preparing-Data-for-Joey-NMT-Toolkit/tree/main/docs</a> 
 </p>
-<p><span style="color:Black"><i>This research was funded by NSF-DEL and NSF-GRFP. Other contributers include Dr. Graham Neubig and Dr. Antonios Anastasopoulos. Copywrite for the bible translation used is held by © 2010, Wycliffe Bible Translators, Inc. All rights reserved.
+<p><span style="color:Black"><i>This research was funded by NSF-DEL and NSF-GRFP. Other contributers include Dr. Graham Neubig and Dr. Antonios Anastasopoulos. Copywrite for the New Testament translation used is held by © 2010, Wycliffe Bible Translators, Inc. All rights reserved.
  </i></span></p>
